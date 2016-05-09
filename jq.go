@@ -11,6 +11,9 @@ import (
 
 func JsonQuery(data []byte, query string) ([]byte, error) {
 	if len(query) > 0 && query[0] == '.' { //最外层调用
+		if len(query) == 1 {
+			return data, nil
+		}
 		query = strings.Replace(query, "[", ".[", -1)
 	}
 	elems := strings.Split(strings.Trim(query, "."), ".")
