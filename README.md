@@ -1,12 +1,15 @@
 # jq
+--------------------
 json query with golang
-You can query a json with a string like this : ".data.productList[1].productInfo.salePrice"
-The idea comes from a C project : https://github.com/stedolan/jq
-You are free to use it. However ,it's your own risk to use it in production!
-Have Fun!
+## Introduction
+--------------------
+ You can query a json with a string like this : __".data.productList[1].productInfo.salePrice"__  
+ The idea comes from a C project : https://github.com/stedolan/jq  
+ You are free to use it. However ,it's your own risk to use it in production!  
+ Have Fun!  
 
-Following is a sample program.
-```go
+### Following is a sample program.
+```go 
 package main
 
 import (
