@@ -6,7 +6,7 @@ You are free to use it. However ,it's your own risk to use it in production!
 Have Fun!
 
 Following is a sample program.
-
+```go
 package main
 
 import (
@@ -57,3 +57,4 @@ func main() {
 
 
 //you will get :the price is: 130
+```
