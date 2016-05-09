@@ -1,2 +1,2 @@
-# jqwithgo
+# jq
 json query with golang
