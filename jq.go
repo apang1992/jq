@@ -81,3 +81,14 @@ func String(data []byte, err error) (string, error) {
 		return "", errors.New("unknown json format:" + string(data))
 	}
 }
+
+func Int64(data []byte, err error) (int64, error) {
+	if err != nil {
+		return 0, err
+	}
+	var ret int64
+	if err := json.Unmarshal(data, &ret); err != nil {
+		return 0, err
+	}
+	return ret, nil
+}
