@@ -21,6 +21,9 @@ func JsonQuery(data []byte, query string) ([]byte, error) {
 	if err := json.Unmarshal(data, &reply); err != nil {
 		return nil, err
 	}
+	if reply == nil {
+		return nil, errors.New("query is null")
+	}
 	switch {
 	case reflect.TypeOf(reply).Kind() == reflect.Map && !strings.Contains(elems[0], "["):
 		replyMap := reply.(map[string]interface{})
