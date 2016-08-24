@@ -95,3 +95,15 @@ func Int64(data []byte, err error) (int64, error) {
 	}
 	return ret, nil
 }
+
+func Bool(data []byte, err error) (bool, error) {
+	if err != nil {
+		return false, err
+	}
+	var ret bool
+	if err := json.Unmarshal(data, &ret); err != nil {
+		return false, err
+	} else {
+		return ret, nil
+	}
+}
